@@ -1,6 +1,6 @@
 package package01;
 
-public class Item {
+public class Item  extends Game {
     int health, attack, defense, speed, luck;
     String name;
     Boolean isEquipped;
@@ -26,52 +26,40 @@ public class Item {
     public String getName() {
         return name;
     }
-
     public void setHealth(int h) {
         health = h;
     }
-
     public int getHealth() {
         return health;
     }
-
     public void setAttackMax(int a) {
         attack = a;
     }
-
     public int getAttackMax() {
 
         return attack;
     }
-
     public void setDefense(int d) {
         defense = d;
     }
-
     public int getDefense() {
         return defense;
     }
-
     public void setSpeed(int s) {
         speed = s;
     }
-
     public int getSpeed() {
         return speed;
     }
-
     public void setLuck(int l) {
         luck = l;
     }
-
     public int getLuck() {
         return luck;
     }
-
     public void setEquipStatus(Boolean equip) {
         isEquipped = equip;
     }
-
     public boolean getEquipStatus() {
         return isEquipped;
     }

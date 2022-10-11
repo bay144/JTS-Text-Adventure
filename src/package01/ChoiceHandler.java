@@ -3,7 +3,7 @@ package package01;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ChoiceHandler extends Game implements ActionListener  {
+public class ChoiceHandler  extends Game implements ActionListener  {
     public void actionPerformed(ActionEvent event) {
         String yourChoice = event.getActionCommand(); //adds action command to whatever button is clicked. If u click c1 its will add that to the your choice string
         //add results to buttons

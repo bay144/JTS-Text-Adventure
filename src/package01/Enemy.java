@@ -1,7 +1,9 @@
 package package01;
 import java.util.Random;
 
-public class Enemy {
+
+// @me try without extends? bc if i dont add it its not runnable
+public class Enemy extends Game {
     int health, attack, defense, speed, luck;
     String name;
 
