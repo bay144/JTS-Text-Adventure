@@ -9,53 +9,25 @@ import java.util.Random;
 import javax.swing.*;
 
 public class Game {
-    //creates window
     JFrame window;
     static Container container;
-    //creates title panel
-    static JPanel titleNamePanel;
-    static JPanel startButtonPanel;
-    static JPanel mainTextPanel;
-    static JPanel choiceButtonPanel;
-    static JPanel playerStatsPanel;
-    JPanel inventoryButtonPanel;
-    JPanel picturePanel;
+    static JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerStatsPanel, picturePanel ;
     JLabel titleNameLabel;
-    static JLabel healthLabel;
-    static JLabel healthLabelNumber;
-    static JLabel attackLabel;
-    static JLabel attackLabelNumber;
-    static JLabel defenseLabel;
-    static JLabel defenseLabelNumber;
-    static JLabel speedLabel;
-    static JLabel speedLabelNumber;
-    static JLabel luckLabel;
-    static JLabel luckLabelNumber;
-    static JLabel pictureLabel;
+    static JLabel healthLabel, healthLabelNumber, attackLabel, attackLabelNumber, defenseLabel, defenseLabelNumber, speedLabel, speedLabelNumber, luckLabel, luckLabelNumber, pictureLabel ;
     Font titleFont = new Font("Papyrus", Font.PLAIN, 60);
-    static Font normalFont = new Font("Papyrus", Font.PLAIN, 20);
-    static Font statsFont = new Font("Papyrus", Font.PLAIN, 16);
-    static JButton startButton;
-    static JButton choice1;
-    static JButton choice2;
-    static JButton choice3;
-    static JButton choice4;
+    static Font normalFont = new Font("Papyrus", Font.PLAIN, 20), statsFont = new Font("Papyrus", Font.PLAIN, 16);
+    static JButton startButton, choice1, choice2, choice3, choice4 ;
     static JTextArea mainTextArea ;
-    static int playerHealth;
-    static int playerAttack;
-    static int playerDefense;
-    static int playerSpeed;
-    static int playerLuck;
+    static int playerHealth, playerAttack, playerDefense, playerSpeed, playerLuck;
     static String position;
-    titleScreenHandler tsHandler = new titleScreenHandler();
-    ChoiceHandler choiceHandler = new ChoiceHandler();
+    static titleScreenHandler tsHandler = new titleScreenHandler();
+    static ChoiceHandler choiceHandler = new ChoiceHandler();
     static ImageIcon image;
 
     public static void main(String[] args) {
 
         new Game();
     }
-
     public Game() {
         //initialized JFrame
         window = new JFrame();
@@ -111,7 +83,6 @@ public class Game {
         //when u click start button, it recognizes the click and call the tsHandler
         startButton.addActionListener(tsHandler);
     }
-
     public void createGameScreen() {
 
         //disable button panel and title screen panel otherwise if u click button it will stay on the same page
@@ -244,110 +215,8 @@ public class Game {
         luckLabelNumber.setText("" + playerLuck);
         rooms.story();
     }
-
-
     public Random random = new Random();
     public boolean randomChance() {
         return random.nextBoolean();
-    }
-    public class titleScreenHandler implements ActionListener {
-        public void actionPerformed(ActionEvent event) {
-            createGameScreen();
-        }
-    }
-    public class ChoiceHandler implements ActionListener {
-        public void actionPerformed(ActionEvent event) {
-            String yourChoice = event.getActionCommand(); //adds action command to whatever button is clicked. If u click c1 its will add that to the your choice string
-
-            //add results to buttons
-            switch(position){
-                case "kingRoom":
-                    switch(yourChoice){
-                        case "c1": break;
-                        case "c2": break;
-                        case "c3": break;
-                        case "c4": break;
-                    }
-                    break;
-                case "queenRoom":
-                    switch(yourChoice){
-                        case "c1": break;
-                        case "c2": break;
-                        case "c3": break;
-                        case "c4": break;
-                    }
-                    break;
-                case "casinoLobby": //recognizes position
-                    switch(yourChoice){
-                        case "c1": rooms.solveRiddle(); break;
-                        case "c2": rooms.attackHost(); break;
-                        case "c3": rooms.sneakIn(); break;
-                        case "c4": rooms.blockedExit(); break;
-                    }
-                    break;
-                case "story":
-                    switch (yourChoice){
-                        case "c1": rooms.casinoLobby(); break;
-                        case "c2": rooms.casinoLobby(); break;
-                        case "c3": rooms.casinoLobby(); break;
-                        case "c4": rooms.casinoLobby(); break;
-                    }
-                    break;
-                case "solveRiddle":
-                    switch(yourChoice) {
-                        case "c1": rooms.youLost(); break;
-                        case "c2": rooms.youLost(); break;
-                        case "c3": rooms.hallway(); break;
-                        case "c4": rooms.youLost(); break;
-                    }
-                    break;
-                case "attackHost": // if hp less hank 0 lose. When in fight the 4 choices will be different attacks and have dif damage values.
-                    switch (yourChoice){
-                        case "c1": rooms.casinoLobby(); break; // maybe if statement for each attack? but would have  to make room for each damage?
-                        case "c2": break;
-                        case "c3": break;
-                        case "c4": break;
-                    }
-                    break;
-                case "sneakIn":
-                    switch (yourChoice){
-                        case "c1":
-                            if (randomChance())
-                            { rooms.bathroomFailed();}
-                            else{
-                                rooms.bathroomSuccess();}
-                        case "c2":
-                        case "c4":
-                        case "c3": break;
-                    }
-                    break;
-                case "hallway":
-                    switch(yourChoice){
-                        case "c1": rooms.queenRoom();break;
-                        case "c2": rooms.kingRoom(); break;
-                        case "c3": rooms.jackRoom(); break;
-                        case "c4": break;
-                    }
-                    break;
-                case "bathroomSuccess":
-                    switch(yourChoice) {
-                        case "c1": rooms.hallway(); break;
-                        case "c2": break;
-                        case "c4": break;
-                        case "c3": break;
-                    }
-                    break;
-                case "bathroomFail":
-                    switch(yourChoice) {
-                        case"c1": rooms.casinoLobby(); break;
-                        case "c2":
-                        case "c4":
-                        case "c3":
-                            break;
-                    }
-                    break;
-
-            }
-        }
     }
 }

@@ -1,15 +1,7 @@
 package package01;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Random;
 import javax.swing.*;
 
 public class rooms extends Game{
-    private static ActionListener ChoiceHandler;
     public static void casinoLobby() {
         position = "casinoLobby";
         image = new ImageIcon(".//Images//testpic.png");
@@ -58,7 +50,6 @@ public class rooms extends Game{
         choice2.setText("");
         choice3.setText("");
         choice4.setText("");
-
     }
     public static void bathroomFailed() {
         position = "bathroomFailed";
