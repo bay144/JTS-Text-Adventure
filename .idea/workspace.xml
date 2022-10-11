@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac9982ba-1f04-4f57-b7ea-1199873b232d" name="Changes" comment="GAME">
-      <change afterPath="$PROJECT_DIR$/src/package01/CreateGameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package01/ChoiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/package01/ChoiceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package01/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/package01/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/package01/player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/package01/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/package01/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package01/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/package01/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package01/titleScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/package01/titleScreenHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +66,7 @@
       <workItem from="1665435503330" duration="177000" />
       <workItem from="1665436334396" duration="245000" />
       <workItem from="1665438326296" duration="5401000" />
-      <workItem from="1665494489558" duration="6529000" />
+      <workItem from="1665494489558" duration="7129000" />
     </task>
     <task id="LOCAL-00001" summary="GAME">
       <created>1665434709509</created>
@@ -115,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665497940893</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="GAME">
+      <created>1665502063363</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665502063363</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

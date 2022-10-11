@@ -120,6 +120,6 @@ public class CreateGameScreen extends Game{
         luckLabelNumber.setFont(statsFont);
         luckLabelNumber.setForeground(Color.black);
         playerStatsPanel.add(luckLabelNumber);
-        playerSetup();
+        player.playerSetup();
     }
 }

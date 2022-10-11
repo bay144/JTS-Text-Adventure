@@ -83,21 +83,9 @@ public class Game {
         //when u click start button, it recognizes the click and call the tsHandler
         startButton.addActionListener(tsHandler);
     }
-    public void playerSetup() {
-        //set parameters
-        playerHealth = 7;
-        playerAttack = 7;
-        playerSpeed = 9;
-        playerDefense = 10;
-        playerLuck = 8;
 
-        healthLabelNumber.setText("" + playerHealth);
-        speedLabelNumber.setText("" + playerSpeed);
-        attackLabelNumber.setText("" + playerAttack);
-        defenseLabelNumber.setText("" + playerDefense);
-        luckLabelNumber.setText("" + playerLuck);
-        rooms.story();
-    }
+
+
 
 
     public Random random = new Random();
